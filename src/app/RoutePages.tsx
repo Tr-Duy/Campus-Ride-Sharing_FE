@@ -1,0 +1,18 @@
+import { lazy } from 'react'
+export const HomePage = lazy(() => import('../pages/HomePage'))
+export const FaresPage = lazy(() => import('../pages/FaresPage'))
+export const PoliciesPage = lazy(() => import('../pages/PoliciesPage'))
+export const MyTripsPage = lazy(() => import('../pages/MyTripsPage'))
+export const TripDetailPage = lazy(() => import('../pages/TripDetailPage'))
+export const DemoAuthPage = lazy(() => import('../pages/DemoAuthPage'))
+export const NotFoundPage = lazy(() => import('../pages/NotFoundPage'))
+export const BookStep = lazy(() => import('../features/booking/BookStep'))
+
+export const LoginPage = lazy(() => import('../features/auth/pages/LoginPage').then(module => ({ default: module.LoginPage })))
+export const RegisterPage = lazy(() => import('../features/auth/pages/RegisterPage').then(module => ({ default: module.RegisterPage })))
+export const ForgotPasswordPage = lazy(() => import('../features/auth/pages/ForgotPasswordPage').then(module => ({ default: module.ForgotPasswordPage })))
+export const DetailsStep = lazy(() => import('../features/booking/BookingSteps').then(module => ({ default: module.DetailsStep })))
+export const ConfirmStep = lazy(() => import('../features/booking/BookingSteps').then(module => ({ default: module.ConfirmStep })))
+export const PaymentStep = lazy(() => import('../features/booking/BookingSteps').then(module => ({ default: module.PaymentStep })))
+export const PaymentResult = lazy(() => import('../features/booking/BookingSteps').then(module => ({ default: module.PaymentResult })))
+export const MatchingPage = lazy(() => import('../features/booking/BookingSteps').then(module => ({ default: module.MatchingPage })))

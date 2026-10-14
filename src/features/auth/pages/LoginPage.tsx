@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { routes } from '../../../config/routes'
 import { getApiErrorMessage } from '../../../lib/axios'
 import { AuthHeading } from './shared'
@@ -10,6 +10,7 @@ import { loginSchema, type LoginValues } from '../schemas/auth.schema'
 import { authService } from '../services/auth.service'
 
 export function LoginPage() {
+  const [searchParams] = useSearchParams()
   const [message, setMessage] = useState<{ text: string; tone: 'error' | 'info' } | null>(null)
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<LoginValues>({ resolver: zodResolver(loginSchema) })
   const onSubmit = async (values: LoginValues) => {
@@ -30,6 +31,7 @@ export function LoginPage() {
       {message && <FormMessage tone={message.tone}>{message.text}</FormMessage>}
       <button className="primary-button" type="submit" disabled={isSubmitting}>{isSubmitting ? 'Đang gửi…' : 'Đăng nhập'}</button>
     </form>
+    <p className="form-switch"><Link to={"/demo/login?" + searchParams.toString()}>Trải nghiệm đặt xe bằng tài khoản demo</Link></p>
     <p className="form-switch">Chưa có tài khoản? <Link to={routes.register}>Đăng ký</Link></p>
   </>
 }

@@ -1,16 +1,19 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { routes } from '../../../config/routes'
+import { usePageMetadata } from '../../../hooks/usePageMetadata'
+import FloatingSupport from '../../../components/common/FloatingSupport'
 
 export function AuthShell() {
+  usePageMetadata()
   return (
     <div className="auth-shell">
       <header className="site-header">
-        <Link className="brand" to={routes.login}>Cung Đường</Link>
+        <Link className="brand" to="/">Cung Đường</Link>
         <nav className="desktop-nav" aria-label="Điều hướng chính">
-          <span>Đặt xe</span><span>Chuyến của tôi</span><span>Giá cước</span><span>Chính sách</span>
+          <NavLink to="/book">Đặt xe</NavLink><NavLink to="/my-trips">Chuyến của tôi</NavLink><NavLink to="/fares">Giá cước</NavLink><NavLink to="/policies">Chính sách</NavLink>
           <NavLink className="account-link" to={routes.login}>Tài khoản</NavLink>
         </nav>
-        <span className="mobile-menu" aria-hidden="true">☰</span>
+        <Link className="mobile-menu" to="/" aria-label="Về trang chủ">⌂</Link>
       </header>
       <main className="auth-main">
         <aside className="journey-panel" aria-label="Cung Đường — đi cùng an tâm">
@@ -22,7 +25,8 @@ export function AuthShell() {
         </aside>
         <section className="form-panel"><Outlet /></section>
       </main>
-      <footer className="site-footer"><span>© Cung Đường&nbsp; · &nbsp;Thiết kế giao diện</span><span>Điều khoản&nbsp; · &nbsp;Bảo mật&nbsp; · &nbsp;Hỗ trợ</span></footer>
+      <footer className="site-footer"><span>© Cung Đường&nbsp; · &nbsp;Thiết kế giao diện</span><span><Link to="/policies#terms">Điều khoản</Link>&nbsp; · &nbsp;<Link to="/policies">Bảo mật &amp; hỗ trợ</Link></span></footer>
+      <FloatingSupport />
     </div>
   )
 }
