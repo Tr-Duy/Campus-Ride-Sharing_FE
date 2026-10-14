@@ -24,7 +24,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [booking, setBookingState] = useState<BookingState>(DEFAULT_BOOKING);
   const [bookings, setBookings] = useState<Booking[]>(MOCK_BOOKINGS.map((booking) => ({ ...booking })));
   const [currentId, setCurrentId] = useState<string | null>(null);
-  const [returnTo, setReturnTo] = useState('/book');
   const [toast, setToast] = useState('');
   const [toastKey, setToastKey] = useState(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -59,14 +58,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         booking,
         bookings,
         currentId,
-        returnTo,
         toast,
         toastKey,
         setUser,
         setBooking,
         setBookings,
         setCurrentId,
-        setReturnTo,
         showToast,
         updateBookingStatus,
         updateBookingRefund,

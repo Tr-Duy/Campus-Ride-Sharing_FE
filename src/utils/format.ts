@@ -21,16 +21,6 @@ export const dateLocal = (value: string): string => {
   );
 };
 
-/** Escape HTML để tránh XSS */
-export const escapeHTML = (s: unknown): string =>
-  String(s ?? '').replace(
-    /[&<>"']/g,
-    (c) =>
-      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[
-        c
-      ] ?? c),
-  );
-
 /** Kiểm tra số điện thoại Việt Nam */
 export const validPhone = (s: string): boolean =>
   /^0\d{9}$/.test(String(s).trim());

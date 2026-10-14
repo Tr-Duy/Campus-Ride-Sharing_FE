@@ -1,7 +1,7 @@
 import { HomePage, FaresPage, PoliciesPage, MyTripsPage, TripDetailPage, DemoAuthPage, NotFoundPage, BookStep, LoginPage, RegisterPage, ForgotPasswordPage, DetailsStep, ConfirmStep, PaymentStep, PaymentResult, MatchingPage } from './RoutePages'
 import { Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import { AuthLayout } from '../components/layout/AuthLayout'
+import { AuthShell as AuthLayout } from '../features/auth/components/AuthShell'
 import SiteLayout from '../components/layout/SiteLayout'
 import RequireAccount from '../components/common/RequireAccount'
 export const router = createBrowserRouter([

@@ -6,7 +6,6 @@ export interface AppState {
   booking: BookingState;
   bookings: Booking[];
   currentId: string | null;
-  returnTo: string;
   toast: string;
   toastKey: number;
 }
@@ -16,7 +15,6 @@ export interface AppContextValue extends AppState {
   setBooking: (partial: Partial<BookingState>) => void;
   setBookings: (bookings: Booking[]) => void;
   setCurrentId: (id: string | null) => void;
-  setReturnTo: (path: string) => void;
   showToast: (msg: string) => void;
   updateBookingStatus: (id: string, status: BookingStatus) => void;
   updateBookingRefund: (id: string, refund: string) => void;

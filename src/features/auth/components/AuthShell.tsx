@@ -40,7 +40,3 @@ function RouteIllustration() {
     <g transform="translate(207 130)"><rect width="80" height="37" rx="12" fill="#93320D"/><rect x="15" y="7" width="37" height="16" rx="5" fill="#F6E3DA"/><rect x="8" y="31" width="12" height="8" rx="3" fill="#2B2A27"/><rect x="60" y="31" width="12" height="8" rx="3" fill="#2B2A27"/></g>
   </svg>
 }
-
-export function AuthLayout() {
-  return <AuthShell />
-}

@@ -177,26 +177,6 @@ textarea.field { min-height: 95px; }
 .visual-motion-toggle:hover { background: var(--visual-forest); }
 .animated-visual.is-paused *, .animated-visual.is-paused *::before,
 .animated-visual.is-paused *::after { animation-play-state: paused !important; }
-.ride-landscape { min-height: 520px; background: #edd8b8; isolation: isolate; }
-.ride-landscape-svg { position: absolute; width: 100%; height: 100%; inset: 0; }
-.ride-landscape::after { background: linear-gradient(0deg, #1e392feb, #1e392f80 17%, transparent 40%); pointer-events: none; }
-.ride-landscape .hero-caption { right: 76px; bottom: 26px; }
-.ride-landscape .hero-caption p { margin: 12px 0 7px; font-family: Fraunces, Georgia, serif; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.25; }
-.ride-landscape .pill { color: #f5e8d4; background: #fffaf11c; border: 1px solid #fffaf133; font-size: 11px; }
-.visual-demo-label { color: #e1dccb; font-size: 12px; }
-.landscape-cloud-one { animation: landscape-cloud-drift 12s ease-in-out infinite alternate; }
-.landscape-cloud-two { animation: landscape-cloud-drift 17s ease-in-out infinite alternate-reverse; }
-.landscape-road-markings { animation: landscape-road-flow 1.8s linear infinite; }
-.landscape-car { animation: landscape-car-bob 2s ease-in-out infinite; }
-.landscape-wheel { animation: landscape-wheel-turn 1.4s linear infinite; }
-@keyframes landscape-cloud-drift { to { transform: translateX(26px); } }
-@keyframes landscape-road-flow { to { stroke-dashoffset: -40; } }
-@keyframes landscape-car-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-@keyframes landscape-wheel-turn { to { transform: rotate(360deg); } }
-@media (max-width: 580px) {
-  .ride-landscape { min-height: 410px; border-radius: 160px 160px 22px 22px; }
-  .ride-landscape .hero-caption { left: 22px; right: 70px; bottom: 22px; }
-}
 .journey-preview { background: var(--visual-paper); color: var(--ink); border: 1px solid var(--visual-border); border-radius: 24px; padding: 24px; box-shadow: 0 20px 55px #00000018; overflow: hidden; }
 .journey-preview-heading { display: flex; gap: 12px; align-items: center; padding-right: 26px; margin-bottom: 22px; }
 .journey-preview-icon { width: 44px; height: 44px; border-radius: 14px; background: #e9eddf; color: var(--visual-forest); display: grid; place-items: center; flex-shrink: 0; }

@@ -4,26 +4,6 @@ export const BRAND_NAME = 'Cung Đường';
 export const HOTLINE = '1900 636 636';
 export const ZALO_PHONE = '0901 234 567';
 
-export const BASE_URL = '/api';
-
-export const ENDPOINTS = {
-  register: '/auth/register',
-  verify: '/auth/verify',
-  login: '/auth/login',
-  forgot: '/auth/forgot-password',
-  reset: '/auth/reset-password',
-  bookings: '/bookings',
-  payment: '/payments',
-  matching: '/drivers/matching',
-  location: '/drivers/location',
-  booking: (id: string) => `/bookings/${encodeURIComponent(id)}`,
-  cancel: (id: string) => `/bookings/${encodeURIComponent(id)}/cancel`,
-  change: (id: string) => `/bookings/${encodeURIComponent(id)}/change-request`,
-  refund: (id: string) => `/bookings/${encodeURIComponent(id)}/refund-request`,
-  refundStatus: (id: string) => `/bookings/${encodeURIComponent(id)}/refund-status`,
-  rating: (id: string) => `/bookings/${encodeURIComponent(id)}/rating`,
-};
-
 export const CITIES: string[] = [
   'Hải Phòng',
   'Hà Nội',
