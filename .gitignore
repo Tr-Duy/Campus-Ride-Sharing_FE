@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+
+# Local notes and design handoff materials
+*.md
+docs/
+documentation/
+guide/
+guides/
+**/docs/
+**/documentation/
+**/guide/
+**/guides/
+cung-duong-redesign/
+CODEX_FRONTEND_GUIDE.md
